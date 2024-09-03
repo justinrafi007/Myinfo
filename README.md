@@ -1,2 +1,3 @@
 # Myinfo
-This a web page on my info or portfolio
+This is a web page on my info or portfolio.
+thank you;
