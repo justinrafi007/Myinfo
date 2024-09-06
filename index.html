@@ -1,88 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alamin Rafi - Personal Profile</title>
+    <title>Welcome to my Profile</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #e8f4f8;
-            color: #333;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #FF6F61;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
+
+        body {
+            background-color: rgb(40, 40, 102);
+            color: white;
+            font-variant: normal;
+            font-family: Arial, sans-serif;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(242, 121, 121);
+            padding: 0 20px;
         }
-        h1 {
-            color: #FF6F61;
-        }
-        .section-title {
-            color: #3498db;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.1em;
-            color: #555;
-        }
-        .contact-info ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .contact-info ul li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        a {
-            color: #FF6F61;
-            text-decoration: none;
+
+        nav .left {
+            font-size: 24px;
             font-weight: bold;
         }
-        a:hover {
-            color: #3498db;
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            display: inline-block;
+        }
+
+        nav ul li:hover {
+            cursor: pointer;
+            color: rgb(27, 13, 212);
+            font-size: 1.1rem;
+        }
+
+        /* Main content layout */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content .left-section,
+        .content .right-section {
+            width: 48%;
+            text-align: left;
+            background-color: rgb(30, 30, 80);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content .left-section {
+            align-self: flex-start;
+        }
+
+        .content .right-section {
+            align-self: flex-end;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: lightblue;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        /* Styling for the Typed.js text */
+        #element {
+            color: rgb(158, 11, 11); /* Change text color here */
+            font-family: 'Courier New', Courier, monospace; /* Change font family here */
+            font-size: 24px; /* Change font size here */
+            margin-top: 10px;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Alamin Rafi</h1>
-        <p>Welcome to My  Profile</p>
+        <nav>
+            <div class="left">Rafi's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li>Achivement</li>
+                    <li>Contact Me</li>
+                    
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <div class="container">
-        <section>
-            <h2 class="section-title">About Me</h2>
-            <p>Hello! I'm Alamin Rafi, and I'm currently working in the field of cybersecurity. I am passionate about protecting digital assets and ensuring secure operations in the cyber world.</p>
-        </section>
+    <!-- Main content with left and right sections -->
+    <div class="content">
+        <div class="left-section">
+            <h2>About Me</h2>
+            <span id="element"></span>
 
-        <section>
-            <h2 class="section-title">My Interests</h2>
-            <p>I have a keen interest in IT and cybersecurity. I'm always excited to learn more about the latest advancements in technology and security measures to safeguard digital information.</p>
-        </section>
+            <p>Hello, I'm Alamin Rafi, a passionate cybersecurity professional. I specialize in ethical hacking, penetration testing, and IT security. I aim to make the digital world safer for individuals and businesses.</p>
 
-        <section class="contact-info">
-            <h2 class="section-title">Contact Information</h2>
-            <ul>
-                <li>Email: alaminrafi004@gmail.com</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/alamin-rafi004/" target="_blank">LinkedIn Profile</a></li>
-                <li>GitHub: <a href="https://github.com/justinrafi007" target="_blank">GitHub Profile</a></li>
-            </ul>
-        </section>
+            <p>From this web Portfolio, you will be able to know more about me.</p>
+        </div>
+        <div class="right-section">
+            <!-- Adding the uploaded image in the right section -->
+            <img src="D:\black.jpg" alt="Digital Artist">
+            <p>This is my picture</p>
+        </div>
     </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Welcome to my Profile', 'You are looking Nice Today'],
+            typeSpeed: 50,
+        });
+    </script>
 </body>
+
 </html>
