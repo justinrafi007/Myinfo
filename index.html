@@ -43,6 +43,7 @@
         nav ul li {
             margin: 0 20px;
             display: inline-block;
+            transition: color 0.3s, font-size 0.3s;
         }
 
         nav ul li:hover {
@@ -99,6 +100,56 @@
             font-size: 24px; /* Change font size here */
             margin-top: 10px;
         }
+
+        /* Media Queries for Responsiveness */
+
+        /* Mobile devices (max-width: 600px) */
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .content .left-section,
+            .content .right-section {
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        /* Tablets (width between 600px and 900px) */
+        @media (min-width: 601px) and (max-width: 900px) {
+            .content .left-section,
+            .content .right-section {
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        /* Larger screens (width more than 900px) */
+        @media (min-width: 901px) {
+            .content .left-section,
+            .content .right-section {
+                width: 48%;
+            }
+
+            nav ul li {
+                margin: 0 20px;
+            }
+        }
     </style>
 </head>
 
@@ -112,9 +163,8 @@
                     <li>About</li>
                     <li>Services</li>
                     <li>Projects</li>
-                    <li>Achivement</li>
+                    <li>Achievement</li>
                     <li>Contact Me</li>
-                    
                 </ul>
             </div>
         </nav>
@@ -132,7 +182,7 @@
         </div>
         <div class="right-section">
             <!-- Adding the uploaded image in the right section -->
-            <img src="https://github.com/justinrafi007/Myinfo/blob/main/black.jpg?raw=true" alt="Digital Artist">
+            <img src="images/black.jpg" alt="Digital Artist">
             <p>This is my picture</p>
         </div>
     </div>
